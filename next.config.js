@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+  output: 'standalone',
   assetPrefix: '/my-assets',
   reactStrictMode: true,
   images: {
@@ -11,6 +12,7 @@ module.exports = {
         pathname: '**',
       },
     ],
+    minimumCacheTTL: 100,
   },
   async redirects() {
     return [
